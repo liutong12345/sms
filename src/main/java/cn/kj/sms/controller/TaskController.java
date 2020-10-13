@@ -2,6 +2,8 @@ package cn.kj.sms.controller;
 
 import cn.kj.sms.domain.Task;
 import cn.kj.sms.service.TaskService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +19,6 @@ import java.util.List;
 public class TaskController{
     @Autowired
     private TaskService taskService;
-
     @RequestMapping
     public String taskScheduleJob() {
         return "management/task";
@@ -32,6 +33,7 @@ public class TaskController{
     @RequestMapping("/list")
     public List<Task> list(Task task) {
         // 查询列表数据
+
         return taskService.list(task);
     }
 

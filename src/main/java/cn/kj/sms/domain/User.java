@@ -3,25 +3,35 @@ package cn.kj.sms.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * user实体类
- * @author 小卖铺的老爷爷
- * @date 2018年1月13日
- * @website www.laoyeye.net
- */
 public class User implements Serializable {
 
-    /**
-     * 
-     */
-    private static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = -404430361746363623L;
     private Long id;
     private String username;
     private String nickname;
     private String password;
+    private String avatar;
     private String email;
     private Boolean enable;
     private Date createTime;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     private Date updateTime;
 
     public Long getId() {
@@ -60,5 +70,4 @@ public class User implements Serializable {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
-    
 }

@@ -6,6 +6,7 @@ import java.util.Date;
 
 public class Task implements Serializable{
 
+  private static final long serialVersionUID = 1569833719511980852L;
   private Long id;
   // 任务名
   private String jobName;

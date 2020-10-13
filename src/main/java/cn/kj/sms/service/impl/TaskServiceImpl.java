@@ -59,7 +59,10 @@ public class TaskServiceImpl implements TaskService {
         List<Task> tasks = taskDao.list();
         for (Task task :tasks
              ) {
-            quart.addJob(task);
+            if("1".equals(task.getJobStatus())){
+                quart.addJob(task);
+            }
+
         }
     }
 
